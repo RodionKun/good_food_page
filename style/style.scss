@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,700;1,700&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+/* Mixins */
+@import "../style/_mixins";
+/* Var */
+
+@import "../style/_var";
+
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    min-height: 100%;
+}
+body {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+}
+.wrap {
+    margin: 0 auto;
+    width: 1140px;
+}
+.main {
+    flex-grow: 1;
+}    
+
+/* header */
+
+.header {
+    background-color: $bgc;
+}
+
+.header-wrap {
+    @include flex-justify-between;
+}
+
+.header-nav-list {
+    @include flex-justify-between;
+    gap: 40px;
+    padding-top: 30px;
+    padding-right: 38px;
+}
+.header-nav-list {
+    list-style-type: none;
+    & li a {
+        @include font-title;
+        text-decoration: none;
+        color: $font-black;
+        opacity: 0.6;
+        &:hover {
+            color: $font-yellow;
+        }
+    }
+}
+.header-right {
+    display: flex;
+    align-items: center;
+}
+.header-but {
+    padding: 13px 30px;
+    margin-bottom: -30px;
+    @include button;
+    &:hover {
+        @include button-hover;
+    }
+}
+
+/* promo */
+
+.promo {
+    background-color: $bgc;
+    &-wrap {
+        background-image: url('../img/promo-bg.png');
+        background-repeat: no-repeat;
+        background-position: 500px -35px;
+    }
+}
+.promo-title {
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 300%;
+    line-height: 41px;
+    padding-top: 160px;
+    color: $font-black;
+}
+.promo-main {
+    @include font-desc;
+    font-weight: 500;
+    padding-top: 42px;
+    padding-bottom: 50px;
+}
+.promo-dispath {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding-bottom: 106px;
+}
+.promo-but {
+    @include button;
+    padding: 20px 40px;
+    &:hover {
+        @include button-hover;
+    }
+}
+
+/* features block */
+
+.features-title {
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 31.25px;
+    line-height: 35px;
+    text-transform: capitalize;
+    color: #150C01;
+    text-align: center;
+    &-yeloww {
+        @include font-title;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: $font-yellow;
+        font-family: 'Roboto';
+    }
+}
+.benefits-contain {
+    @include flex-justify-between;
+    justify-content: space-around;
+    padding-top: 44px;
+}
+.benefits-img {
+    &-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('../img/featur-bg-1.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 44px 0 33px 0;
+    }
+    &-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('../img/featur-bg-2.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 44px 0 33px 0;
+    }
+    &-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('../img/featur-bg-3.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 44px 0 33px 0;
+    }
+}
+.benefits-title {
+    @include font-features;
+    text-align: center;
+    padding-top: 33px;
+    &-item {
+        @include font-desc;
+        opacity: 0.7;
+        padding-top: 15px;
+        display: inline-block;
+    }
+}
+
+/* woman */
+
+.food-stalls {
+    @include flex-justify-between;
+    padding-top: 125px;
+    &-img {
+        border-radius: 7%;
+    }
+    &-text {
+        @include flex-column;
+        align-items: flex-start;
+        padding-left: 98px;
+    }
+    &-title {
+        font-family: 'Philosopher';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 35.25px;
+        line-height: 41px;
+        &-yeloww {
+            @include font-desc;
+            color: $font-yellow;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+    }
+    &-desc {
+        @include font-desc;
+        padding: 30px 0;
+    }
+    &-but {
+        @include button;
+        padding: 11px 30px;
+        &:hover {
+            @include button-hover;
+        }
+    }
+}
+.food {
+    position: relative;
+}
+.vector-bg {
+    position: absolute;
+    top: -30px;
+    left: -100px;
+}
+
+/* menu */
+
+.menu {
+    padding-top: 115px;
+}
+
+.menu-text {
+    text-align: center;
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 31.25px;
+    line-height: 24px;
+    padding-bottom: 25px;
+    &-yeloww {
+        @include font-desc;
+        color: $font-yellow;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        padding-bottom: 9px;
+        display: inline-block;
+    }
+    &-desc {
+        @include font-desc;
+        text-align: center;
+        padding-bottom: 60px;
+    }
+}
+
+.menu-list {
+    @include flex-justify-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    &-but {
+        @include button;
+        padding: 11px 30px;
+        margin-bottom: 187px;
+        &:hover {
+            @include button-hover;
+        }
+    }
+}
+.menu-list-item {
+    width: 360px;
+    height: 446px;
+    border: 1px solid #0000001A;
+    &-img {
+        width: 360px;
+        border-radius: 65px 10px 65px 10px;
+    }
+}
+
+.text-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-name, .product-price {
+    @include font-features;
+    padding-top: 21px;
+}
+.product-text {
+    @include font-desc;
+    padding: 20px 0;
+}
+.fa-icon {
+    font-size: 35px;
+    color:#DC780B;
+    cursor: pointer;
+}
+.product-text-box {
+    padding: 0 25px;
+    & a {
+        text-decoration: none;
+    }
+}
+
+/* apps */
+
+.app {
+    background-color: #FBF1E7;
+    &-wrap {
+        padding-left: 97px;
+        padding-top: 114px;
+        position: relative;
+    }
+    &-title {
+        font-family: 'Philosopher';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 31.25px;
+        line-height: 41px;
+        &-yeloww {
+            @include font-desc;
+            color: $font-yellow;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+    }
+    &-desc {
+        @include font-desc;
+        padding: 29px 0 39px 0;
+    }
+}
+.app-stores {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 129px;
+    &-ios {
+        @include button;
+        @include font-title;
+        padding: 11px 29px;
+        color: #ffff;
+        background-color: $font-black;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    &-android {
+        @include font-title;
+        font-weight: 700;
+        border: 1.5px solid rgba(0,0,0,0.3);
+        border-radius: 5px;
+        padding: 11px 29px;
+        color: #150C01;
+        background-color: #FBF1E7;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer; 
+    }
+}
+.app-mobile-img {
+    position: absolute;
+    border-radius: 50px;
+    top: -65px;
+    right: 77px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* quote and feedback */
+
+.quote-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quote-title {
+    padding-top: 115px;
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 31.25px;
+    line-height: 24px;
+    color: #000000;
+    text-align: center;
+    &-yeloww {
+        @include font-desc;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $font-yellow;
+        padding-bottom: 12px;
+        display: inline-flex;
+    }
+}
+
+.quote-desc {
+    text-align: center;
+    @include font-desc;
+    padding: 23px 0 17px 0;
+}
+
+.feedback {
+    @include flex-justify-between;
+    &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 120px;
+    }
+    &-content-text {
+        @include font-desc;
+        color: #000000;
+        opacity: 1;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    &-content-name {
+        @include font-title;
+        text-transform: uppercase;
+        padding-top: 32px;
+        text-align: center;
+    }
+    &-content-position {
+        padding-top: 6px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        text-transform: uppercase;
+        color: #000000;
+        opacity: 0.7;
+    }
+    &-left {
+        margin-right: 139px;
+        fill: #ffff;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+            transform: scale(1.5);
+        }
+    }
+    &-right {
+        margin-left: 140px;
+        fill: #ffff;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+            transform: scale(1.5);
+        }
+    }
+}
+
+/* contact */
+
+.contact {
+    background-color: rgba(220,120,11,0.1);
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-title {
+        font-family: 'Philosopher';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 31.25px;
+        line-height: 41px;
+        color: #150C01;
+        text-align: center;
+        padding-bottom: 46px;
+        &-yeloww {
+            @include font-desc;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: $font-yellow;
+            padding-top: 115px;
+            padding-bottom: 15px;
+            display: inline-flex;
+        }
+    }
+    &-form {
+        display: flex;
+        margin-bottom: 117px;
+        & input{
+            width: 596px;
+            height: 75px;
+            border: none;
+            border-radius: 10px;
+            padding: 32px 32px;
+        }
+        &-button {
+            padding: 30px 57px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: $font-yellow;
+            color: #ffff;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 15px;
+            margin-left: -15px;
+        }
+    }
+}
+
+/* footer */
+
+.footer {
+    background-color: #252525;
+    &-wrap {
+        display: flex;
+        gap: 120px;
+        padding: 137px 0 104px 0;
+    }
+    &-list-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+    & li {
+        @include font-footer;
+        list-style-type: none;
+    }
+    &-img {
+        padding-bottom: 25px;
+    }
+    &-nav {
+        font-family: 'Philosopher';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 20px;
+        color: #FFFFFF;
+        & li {
+            list-style-type: none;
+        }     
+    }
+    &-item {
+        text-decoration: none;
+        @include font-footer;
+        &:hover {
+            color: $font-yellow;
+        }
+    }
+}
+
+.fab {
+    font-size: 25px;
+    margin-top: 25px;
+    color: #FFFFFF;
+    &:hover {
+        color: $font-yellow;
+    }
+}

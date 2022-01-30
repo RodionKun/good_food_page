@@ -1,0 +1,59 @@
+@mixin main-font {
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 700;
+}
+
+@mixin flex-justify-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+@mixin font-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+@mixin button {
+    background-color: #DC780B;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    color: #FFFFFF;
+}
+@mixin button-hover {
+    background-color: #FFFFFF;
+    outline: 1px solid #DC780B;
+    color: #DC780B;
+}
+@mixin font-desc {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #150C01;
+    opacity: 0.7;
+}
+@mixin font-features {
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 24px;
+    color: #150C01;
+}
+
+@mixin font-footer {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    opacity: 0.7;
+}
